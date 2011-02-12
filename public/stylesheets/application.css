@@ -1,29 +1,17 @@
 /* High level containers */
-body 
-{ 
+body{ 
   color: black;
-  
-  font: normal 12px verdana, arial, helvetica, sans-serif;
-  line-height: 1.5;
-  padding: 0px;
-  margin: 0px;
+  font: 62.5% "Helvetica Neue", Helvetica, Arial, "Sans Serif";
 }
 
-#page_container
-{
-  position: absolute;
-  min-height: 400px;
-  
-  color: black;
-	width: 100%;
+#page_container{
+  background: url(/images/rubyonrio/body-bg.png) repeat-x center top;
 }
 
-#content {
-	width: 900px;
-  margin: 5px auto;
-	position: relative;
-	padding-right: 55px;
-/*	display: inline;*/
+#content{
+  background: url(/images/rubyonrio/header-bg.png) no-repeat center top;
+  width: 960px;
+  margin: 0 auto;
 }
 
 #footer
@@ -39,12 +27,18 @@ body
 }
 
 /* Headings */
-h1#page_heading
-{
-  font-size: 24pt;
-	color: #000 !important;
+h1#page_heading{
+  padding: 10px 0 15px;
 }
-
+#page_heading a{
+  background: url(/images/rubyonrio/logo.png) no-repeat;
+  width: 140px;
+  height: 87px;
+  display: block;
+  text-indent: -15000px;
+  text-decoration: none;
+  margin: 0 auto;
+}
 h2
 {
   font-size: 1.4em;
@@ -108,15 +102,36 @@ img
 }
 
 /* Two columns */
-#navigation 
-{
-  position: absolute;
-  width: 15em;
-  top: -1px; 
-  right: -1px;
-
-  border: none;
-  padding: 5px;
+#navigation{
+  float: left;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#e2e2e2));
+  background: -moz-linear-gradient(top, #FFFFFF, #E2e2e2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e2e2e2');
+}
+#navigation li{
+  float: left;
+  border-right: 1px solid #e0e0e0;
+}
+#navigation li:last-child{
+  border-right: 0;
+}
+#navigation a{
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.6em;
+  color: #a8a8a8;
+  text-shadow: white 0px 1px 0px;
+}
+#navigation a:hover{
+  color: #6d0700;
+  text-decoration: none;
 }
 
 #navigation h2
@@ -129,17 +144,7 @@ img
 {
   margin-left: 0;
   font-style: normal;
-}
-
-#navigation ul
-{
-  padding-left: 10px;
-  
-  margin-left: 0px;
-  margin-top: 0px;
-  list-style: none;
-}
-  
+}  
 #navigation ul li
 {
   padding-left: 0px;
@@ -165,12 +170,8 @@ img
   margin-bottom: 1em;
 }
 
-#main 
-{
-  padding-right: 150px;
-  padding-left: 0px;
-  padding-top: 0px;
-  padding-bottom: 40px;
+#main{
+  clear: both;
 }
 
 div.meta

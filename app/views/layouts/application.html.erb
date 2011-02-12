@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title><%= html_title yield(:page_title) %></title>
   <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'rails' %>
@@ -15,12 +16,7 @@
     <div id="content">
       <h1 id="page_heading"><a href="<%= root_url %>"><%= enki_config[:title] %></a></h1>
 
-      <div id="main">
-        <%= yield %>
-      </div>
-
       <div id="navigation">
-        <h2>Pages</h2>
         <ul>
           <% page_links_for_navigation.each do |link| -%>
             <li><%= link_to(link.name, link.url) %></li>
@@ -34,6 +30,13 @@
             <% end -%>
           </ul>
         <% end -%>
+      </div>
+
+      <div id="main">
+        <%= yield %>
+      </div>
+
+      <div id="search">
         <form method="get" id="sform" action="http://www.google.com/search">
           <div>
             <h2><label for="q">Search</label></h2>
