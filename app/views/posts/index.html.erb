@@ -2,7 +2,7 @@
 <% content_for(:head)       do %><%= auto_discovery_link_tag(:atom, @tag.nil? ? formatted_posts_path(:format => 'atom') : posts_path(:tag => @tag, :format => 'atom')) %><% end -%>
 
 <% if @posts.empty? -%>
-	<p>There are no posts yet.</p>
+	<p class="empty">There are no posts yet.</p>
 <% else -%>
 	<% @posts.each do |post| -%>
 	<div class="post post-<%= post.id %>">

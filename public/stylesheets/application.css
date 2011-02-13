@@ -2,35 +2,44 @@
 body{ 
   color: black;
   font: 62.5% "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+  background: #560400 url(/images/rubyonrio/body-bg.png) repeat-x center top;
 }
-
-#page_container{
-  background: url(/images/rubyonrio/body-bg.png) repeat-x center top;
+header, article, section, aside, footer{
+  display: block;
 }
-
-#content{
-  background: url(/images/rubyonrio/header-bg.png) no-repeat center top;
+header{
+  background: #fff url(/images/rubyonrio/header-bg.png) no-repeat center top;
   width: 960px;
   margin: 0 auto;
 }
-
-#footer
-{
-  position: relative;
-  font-size: 8pt;
-/*  padding-top: 5px;*/
-  padding-right: 15px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  color: gray;
-/*  border-bottom: solid 1px #aaaaaa;*/
+footer{
+  background: url(/images/rubyonrio/footer-bg.png) no-repeat center top;
+  height: 270px;
+  clear: both;
+  padding: 3em 0;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  text-align: center;
+}
+footer a{
+  color: #ffcdcd;
+}
+footer .ruby-icon{
+  background: url(/images/rubyonrio/ruby-icon.png) no-repeat;
+  width: 34px;
+  height: 24px;
+  display: inline-block;
+  text-indent: -15000px;
+  margin: 0 3px;
+  vertical-align: middle;
 }
 
 /* Headings */
-h1#page_heading{
+header h1{
   padding: 10px 0 15px;
 }
-#page_heading a{
+header h1 a{
   background: url(/images/rubyonrio/logo.png) no-repeat;
   width: 140px;
   height: 87px;
@@ -39,30 +48,22 @@ h1#page_heading{
   text-decoration: none;
   margin: 0 auto;
 }
-h2
-{
-  font-size: 1.4em;
+h2{
+  font-size: 2.5em;
   color: #333333;
+  padding: .5em 0;
 }
 
-h2 a, h3, h4, h5
-{
+h2 a, h3, h4, h5{
   color: #333333;
 }
 
 /* Text */
-p 
-{
-  padding: 0px;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  margin-left: 0px;
-  margin-right: 0px;
+p{
+  font-size: 1.4em;
 }
-
-strong
-{
-  color: #333333;
+strong{
+  font-weight: bold;
 }
 /* Links */
 .openid
@@ -73,10 +74,8 @@ strong
   background-position: 0px 2px;
 }
 
-a 
-{
-  color: #000051;
-  
+a {
+  color: #a8a8a8;
   text-decoration: none;    
 }
   
@@ -89,12 +88,6 @@ a:hover
 {
   text-decoration: underline;    
 }
-  
-#footer a
-{
-  color: gray;
-  text-decoration: underline;
-}
 
 img
 {
@@ -103,7 +96,9 @@ img
 
 /* Two columns */
 #navigation{
-  float: left;
+  overflow: hidden;
+  width: 187px;
+  margin: 0 auto;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   -moz-border-radius-topleft: 3px;
@@ -169,11 +164,28 @@ img
 {
   margin-bottom: 1em;
 }
-
-#main{
-  clear: both;
+article{
+  overflow: hidden;
+  background: #fff url(/images/rubyonrio/article-bg.png) repeat-x center top;
+  padding: 0 10%;
 }
-
+section{
+  clear: both;
+  float: left;
+  padding: 0 1% 1%;
+  width: 73%;
+  min-height: 400px;
+}
+.empty{
+  color: #aaa;
+  line-height: 20em;
+  font-size: 1.6em;
+}
+aside{
+  float: right;
+  width: 25%;
+  padding-bottom: 1%;
+}
 div.meta
 {
  margin-top: 1em;
@@ -222,11 +234,6 @@ div.meta
   content: "";
 }
 
-h2
-{
-  margin-bottom: 0px;
-}
-
 .separator 
 {
   height: 1px;
@@ -235,16 +242,15 @@ h2
 }
 
 /* Forms */
-label
-{
-  margin-left: 1em;
+input, textarea, select{
+  font-size: 1.4em;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: #eee;
 }
-
-textarea, select
-{
-  font: normal 12px verdana, arial, helvetica, sans-serif;
+input:focus, textarea:focus{
+  background: #fff;
 }
-
 textarea
 {
   width: 500px;
