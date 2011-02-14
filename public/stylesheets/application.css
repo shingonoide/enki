@@ -167,12 +167,16 @@ img
 article{
   overflow: hidden;
   background: #fff url(/images/rubyonrio/article-bg.png) repeat-x center top;
-  padding: 0 10%;
+  padding: 2%;
+  margin: 0 auto;
+  width: 960px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
 }
 section{
   clear: both;
   float: left;
-  padding: 0 1% 1%;
   width: 73%;
   min-height: 400px;
 }
@@ -245,8 +249,11 @@ div.meta
 input, textarea, select{
   font-size: 1.4em;
   padding: 5px;
-  border: 1px solid #ccc;
-  background: #eee;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
 }
 input:focus, textarea:focus{
   background: #fff;
