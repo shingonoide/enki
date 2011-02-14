@@ -1,5 +1,0 @@
-if [[ -s "~/.rvm/enviroments/ruby-1.9.2@enki-rubyonrio" ]] ; then
-   . "~/.rvm/enviroments/ruby-1.9.2@enki-rubyonrio"
-else
-   rvm --create use "ruby-1.9.2@enki-rubyonrio"
-fi
