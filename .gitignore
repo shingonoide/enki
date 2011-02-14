@@ -9,3 +9,5 @@ db/schema.rb
 *~
 .rvmrc
 vendor/*
+public/.htaccess
+
